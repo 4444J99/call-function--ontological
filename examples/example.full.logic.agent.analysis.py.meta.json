@@ -1,0 +1,19 @@
+{
+  "profile": "full",
+  "name": "logic.agent.analysis.py",
+  "identifier": "urn:uuid:123e4567-e89b-12d3-a456-426614174001",
+  "version": "0.4.1",
+  "schema:type": "SoftwareSourceCode",
+  "conformsTo": [
+    "https://schema.org/SoftwareSourceCode",
+    "https://purl.org/dc/terms/"
+  ],
+  "encodingFormat": "text/x-python",
+  "dateCreated": "2025-08-18T00:00:00Z",
+  "dateModified": "2025-08-18T00:00:00Z",
+  "creator": "Example Author",
+  "dc:subject": ["narrative-inference", "agent"],
+  "programmingLanguage": "Python",
+  "license": "Apache-2.0",
+  "inLanguage": "en"
+}

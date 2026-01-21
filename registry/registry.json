@@ -1,0 +1,14 @@
+{
+  "resources": [
+    {
+      "name": "logic.agent.analysis.py",
+      "path": "examples/example.full.logic.agent.analysis.py",
+      "meta": "examples/example.full.logic.agent.analysis.py.meta.json"
+    },
+    {
+      "name": "interface.portal.entry.html",
+      "path": "examples/example.light.interface.portal.entry.html",
+      "meta": "examples/example.light.interface.portal.entry.html.meta.json"
+    }
+  ]
+}

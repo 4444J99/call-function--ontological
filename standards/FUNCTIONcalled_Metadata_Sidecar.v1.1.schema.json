@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "FUNCTIONcalled Metadata Sidecar",
+  "type": "object",
+  "additionalProperties": true,
+  "properties": {
+    "profile": { "type": "string", "enum": ["light", "full"] },
+    "name": { "type": "string" },
+    "identifier": { "type": "string" },
+    "version": {
+      "type": "string",
+      "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?$"
+    },
+    "schema:type": {
+      "type": "string",
+      "enum": [
+        "SoftwareSourceCode",
+        "SoftwareApplication",
+        "CreativeWork",
+        "Dataset",
+        "ImageObject",
+        "AudioObject",
+        "VideoObject",
+        "TextDigitalDocument",
+        "WebPage",
+        "Article"
+      ]
+    },
+    "conformsTo": {
+      "type": "array",
+      "items": { "type": "string", "format": "uri" }
+    },
+    "encodingFormat": { "type": "string" },
+    "dateCreated": { "type": "string", "format": "date-time" },
+    "dateModified": { "type": "string", "format": "date-time" },
+    "creator": { "oneOf": [ {"type": "string"}, {"type": "array", "items": {"type": "string"}} ] },
+    "dc:subject": { "oneOf": [ {"type": "string"}, {"type": "array", "items": {"type": "string"}} ] },
+    "programmingLanguage": { "type": "string" },
+    "license": { "type": "string" },
+    "inLanguage": { "type": "string" }
+  },
+  "required": ["profile"],
+  "allOf": [
+    {
+      "if": { "properties": { "profile": { "const": "light" } }, "required": ["profile"] },
+      "then": { "required": ["profile", "name", "identifier", "version"] }
+    },
+    {
+      "if": { "properties": { "profile": { "const": "full" } }, "required": ["profile"] },
+      "then": {
+        "required": [
+          "profile", "name", "identifier", "version",
+          "schema:type", "conformsTo", "encodingFormat",
+          "dateCreated", "dateModified"
+        ]
+      }
+    }
+  ]
+}

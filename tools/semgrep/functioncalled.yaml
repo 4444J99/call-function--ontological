@@ -1,0 +1,58 @@
+rules:
+  # Rule 1: Detect FUNCTIONcalled header comments
+  - id: functioncalled-header-comment
+    patterns:
+      - pattern-regex: |
+          (?:/\*|#|//|--|<!--|'''|""")[\s\S]*?Layer:\s*\w+\s*\|\s*Role:\s*\w+\s*\|\s*Domain:\s*\w+
+    message: "FUNCTIONcalled header comment detected - validates naming convention compliance"
+    languages: [python, c, cpp, javascript, typescript, go, rust, java, ruby, lua, php, html, swift]
+    severity: INFO
+    metadata:
+      category: documentation
+      technology:
+        - functioncalled
+      references:
+        - https://github.com/functioncalled/spec
+
+  # Rule 2: Detect missing layer declaration in header
+  - id: functioncalled-missing-layer
+    patterns:
+      - pattern-regex: |
+          (?:/\*|#|//|--|<!--|'''|""")[\s\S]{0,100}Role:\s*\w+
+      - pattern-not-regex: |
+          Layer:\s*\w+
+    message: "Header comment has Role but missing Layer declaration"
+    languages: [python, c, cpp, javascript, typescript, go, rust, java, ruby, lua, php, html, swift]
+    severity: WARNING
+    metadata:
+      category: documentation
+      technology:
+        - functioncalled
+
+  # Rule 3: Detect incomplete FUNCTIONcalled header
+  - id: functioncalled-incomplete-header
+    patterns:
+      - pattern-regex: |
+          (?:/\*|#|//|--|<!--|'''|""")[\s\S]{0,100}Layer:\s*\w+
+      - pattern-not-regex: |
+          Layer:\s*\w+\s*\|\s*Role:\s*\w+\s*\|\s*Domain:\s*\w+
+    message: "Incomplete FUNCTIONcalled header - should contain Layer, Role, and Domain"
+    languages: [python, c, cpp, javascript, typescript, go, rust, java, ruby, lua, php, html, swift]
+    severity: WARNING
+    metadata:
+      category: documentation
+      technology:
+        - functioncalled
+
+  # Rule 4: Validate canonical layer names
+  - id: functioncalled-invalid-layer
+    patterns:
+      - pattern-regex: |
+          Layer:\s*(?!core|interface|logic|application|bones|skins|breath|body)\w+
+    message: "Invalid layer name - use: core/bones, interface/skins, logic/breath, or application/body"
+    languages: [python, c, cpp, javascript, typescript, go, rust, java, ruby, lua, php, html, swift]
+    severity: WARNING
+    metadata:
+      category: documentation
+      technology:
+        - functioncalled

@@ -1,0 +1,10 @@
+{
+  "resources": [
+    {
+      "name": "interface.portal.entry.html",
+      "path": "interface/portal/entry.html",
+      "meta": "examples/example.light.interface.portal.entry.html.meta.json",
+      "hash": "examplehash"
+    }
+  ]
+}

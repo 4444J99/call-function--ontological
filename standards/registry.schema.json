@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "FUNCTIONcalled Registry",
+  "type": "object",
+  "properties": {
+    "resources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "path": { "type": "string" },
+          "meta": { "type": "string" },
+          "hash": { "type": "string" }
+        },
+        "required": ["name", "path", "meta"],
+        "additionalProperties": true
+      }
+    }
+  },
+  "required": ["resources"],
+  "additionalProperties": true
+}
