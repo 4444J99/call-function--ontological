@@ -1,14 +1,112 @@
 {
   "resources": [
     {
-      "name": "logic.agent.analysis.py",
-      "path": "examples/example.full.logic.agent.analysis.py",
-      "meta": "examples/example.full.logic.agent.analysis.py.meta.json"
+      "name": "template.css",
+      "path": "interface/template.css",
+      "meta": "interface/template.css.meta.json",
+      "hash": "cd77a2a92f99c8f44d8f1230ad400fc66edcf1cf6eaf339672e0e5f31fa0561e"
+    },
+    {
+      "name": "template.js",
+      "path": "interface/template.js",
+      "meta": "interface/template.js.meta.json",
+      "hash": "aa39cb871dbfcfe9ac1f306d9feffe54190dc256ec7fb0f29f2846c6eba5f46c"
+    },
+    {
+      "name": "template.html",
+      "path": "interface/template.html",
+      "meta": "interface/template.html.meta.json",
+      "hash": "f1a40e75cf6a9f4f33802f3d6c71287c57401a2cfa300206ddc42685c204eba8"
+    },
+    {
+      "name": "template.php",
+      "path": "interface/template.php",
+      "meta": "interface/template.php.meta.json",
+      "hash": "dbc21496aaa939bb9b1c51a38865786f31772f57aea2b2ab3f390571b0f269a3"
+    },
+    {
+      "name": "template.c",
+      "path": "core/template.c",
+      "meta": "core/template.c.meta.json",
+      "hash": "75529522b7645ac648f16cad40219f70882e6a3d51fe50a7d52faf9b840454c4"
+    },
+    {
+      "name": "template.cpp",
+      "path": "core/template.cpp",
+      "meta": "core/template.cpp.meta.json",
+      "hash": "1cf275cca7f61f18c446f144094da0df0d4f3fa72b1f4386f13958cf871021f4"
+    },
+    {
+      "name": "template.rs",
+      "path": "core/template.rs",
+      "meta": "core/template.rs.meta.json",
+      "hash": "9e97a40f7c61dfa3baea9ea07ec93550a1b79876b5c92411d59b2070a798c073"
+    },
+    {
+      "name": "template.go",
+      "path": "core/template.go",
+      "meta": "core/template.go.meta.json",
+      "hash": "b269e8ad0c750ce734232b2f44a3268deba65a8dcc5d8a8338f7f6410053a392"
+    },
+    {
+      "name": "template.rb",
+      "path": "logic/template.rb",
+      "meta": "logic/template.rb.meta.json",
+      "hash": "96680bd75bd41b646c6456de56e196af3067338014ac15fbabde99673124969d"
+    },
+    {
+      "name": "template.lua",
+      "path": "logic/template.lua",
+      "meta": "logic/template.lua.meta.json",
+      "hash": "8988731b807e853ce26cf779a77bc465c5c4c6e1f9ccba439e2b3345ebeed35c"
+    },
+    {
+      "name": "template.py",
+      "path": "logic/template.py",
+      "meta": "logic/template.py.meta.json",
+      "hash": "8981adea43a82e62440437f1a17fc5e4091eac316c9df318e665160815eff08a"
     },
     {
       "name": "interface.portal.entry.html",
-      "path": "examples/example.light.interface.portal.entry.html",
-      "meta": "examples/example.light.interface.portal.entry.html.meta.json"
+      "path": "examples/interface.portal.entry.html",
+      "meta": "examples/interface.portal.entry.html.meta.json",
+      "hash": "c1f2372b2f6be6601d24037a5c8dd3ef226d7d4a608163858e79c4e25b81e338"
+    },
+    {
+      "name": "logic.agent.analysis.py",
+      "path": "examples/logic.agent.analysis.py",
+      "meta": "examples/logic.agent.analysis.py.meta.json",
+      "hash": "0e7695fedf864378ec33f92da41815fb9ba842700e7d9fe5ddb5b69cc35c9258"
+    },
+    {
+      "name": "logic.audio.notification.txt",
+      "path": "examples/logic.audio.notification.txt",
+      "meta": "examples/logic.audio.notification.txt.meta.json",
+      "hash": "73bf224fbfacf8d0048644d417196e17b1e7676ab99be66fc8b89b35a02058e4"
+    },
+    {
+      "name": "interface.icon.brand.svg",
+      "path": "examples/interface.icon.brand.svg",
+      "meta": "examples/interface.icon.brand.svg.meta.json",
+      "hash": "332bd74869a1771f6e10c2c63a117ae0ffec34864083e9255b19d643f0380803"
+    },
+    {
+      "name": "template.java",
+      "path": "application/template.java",
+      "meta": "application/template.java.meta.json",
+      "hash": "0413a213ca926c3191efad37e006881b191eded5e9c54866b5945bebd1f5c754"
+    },
+    {
+      "name": "template.m",
+      "path": "application/template.m",
+      "meta": "application/template.m.meta.json",
+      "hash": "c5ff990713c18d00163fa05055e3024cd29012377cecd82c6ed35f52e8540908"
+    },
+    {
+      "name": "template.swift",
+      "path": "application/template.swift",
+      "meta": "application/template.swift.meta.json",
+      "hash": "89602c3d0831cddfac036c7529ebea0cc507531614d9365cc27e218dc84b712c"
     }
   ]
 }

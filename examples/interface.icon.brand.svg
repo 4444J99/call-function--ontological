@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!--
+  Layer: interface | Role: icon | Domain: brand
+  Responsibility: Brand identity icon for FUNCTIONcalled()
+  Inputs: none (static asset)
+  Outputs: Visual representation of brand
+  Invariants: Must be scalable, maintain aspect ratio
+  -->
+  <rect width="100" height="100" fill="#2c3e50" rx="10"/>
+  <text x="50" y="55" font-family="monospace" font-size="14" fill="#ecf0f1" text-anchor="middle">
+    FC()
+  </text>
+  <text x="50" y="75" font-family="sans-serif" font-size="8" fill="#95a5a6" text-anchor="middle">
+    FUNCTIONcalled
+  </text>
+</svg>

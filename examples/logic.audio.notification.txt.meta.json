@@ -1,0 +1,16 @@
+{
+  "profile": "full",
+  "name": "logic.audio.notification.txt",
+  "identifier": "urn:uuid:fc000005-0005-4005-8005-000000000002",
+  "version": "1.0.0",
+  "schema:type": "AudioObject",
+  "conformsTo": [
+    "https://schema.org/AudioObject"
+  ],
+  "encodingFormat": "text/plain",
+  "dateCreated": "2026-01-21T00:00:00Z",
+  "dateModified": "2026-01-21T00:00:00Z",
+  "creator": "FUNCTIONcalled Project",
+  "license": "MIT",
+  "description": "Placeholder demonstrating FUNCTIONcalled() convention for audio assets (replace with actual .mp3)"
+}

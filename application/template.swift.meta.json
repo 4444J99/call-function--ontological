@@ -1,0 +1,10 @@
+{
+  "profile": "light",
+  "name": "template.swift",
+  "identifier": "urn:uuid:fc000004-0004-4004-8004-000000000001",
+  "version": "1.0.0",
+  "schema:type": "SoftwareSourceCode",
+  "programmingLanguage": "Swift",
+  "license": "MIT",
+  "description": "Application layer template for Swift - iOS/macOS apps, embodiment"
+}

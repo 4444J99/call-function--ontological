@@ -1,0 +1,10 @@
+{
+  "profile": "light",
+  "name": "template.rs",
+  "identifier": "urn:uuid:fc000001-0001-4001-8001-000000000003",
+  "version": "1.0.0",
+  "schema:type": "SoftwareSourceCode",
+  "programmingLanguage": "Rust",
+  "license": "MIT",
+  "description": "Core layer template for Rust language - foundation, kernel, structure"
+}

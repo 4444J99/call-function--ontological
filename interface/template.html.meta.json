@@ -1,0 +1,10 @@
+{
+  "profile": "light",
+  "name": "template.html",
+  "identifier": "urn:uuid:fc000002-0002-4002-8002-000000000001",
+  "version": "1.0.0",
+  "schema:type": "WebPage",
+  "encodingFormat": "text/html",
+  "license": "MIT",
+  "description": "Interface layer template for HTML - portals, surfaces, UI"
+}

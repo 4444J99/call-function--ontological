@@ -97,8 +97,33 @@ Below is a mapping of file types to their roles and use-cases across the four la
 
 ### Meta Pattern
 
-- Systems languages (C, C++, Rust, Go) = Bones & blood vessels of the OS  
-- Web stack (HTML, CSS, JS, PHP) = Skins & portals  
-- Scripting & AI (Python, Lua, Ruby) = Breath & spirit  
+- Systems languages (C, C++, Rust, Go) = Bones & blood vessels of the OS
+- Web stack (HTML, CSS, JS, PHP) = Skins & portals
+- Scripting & AI (Python, Lua, Ruby) = Breath & spirit
 - Mobile (Swift, Obj-C, Java) = Embodiment in the physical hand-held world
+
+## Projects Using FUNCTIONcalled()
+
+*Is your project using FUNCTIONcalled()? [Submit a PR](https://github.com/YOUR_USERNAME/call-function--ontological/pulls) to add it here!*
+
+<!-- Example format:
+- [Project Name](https://github.com/user/repo) - Brief description
+-->
+
+## Documentation
+
+- [Quick Start Guide](docs/quickstart.md) - Get started in 5 minutes
+- [Full Specification](standards/FUNCTIONcalled_Spec_v1.0.md) - Complete naming spec
+- [Layer Architecture](docs/layers.md) - Visual guide to the four layers
+- [Migration Guide](docs/migration.md) - Adopt FUNCTIONcalled() in existing projects
+- [Comparison](docs/comparison.md) - How it compares to BEM, Atomic Design, etc.
+- [Case Study](docs/case-study.md) - Real-world adoption example
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute.
+
+## License
+
+MIT
 

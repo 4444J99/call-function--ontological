@@ -48,18 +48,25 @@ EXCLUDE_PATTERNS = [
     r'^.*\.schema\.json$',  # Schema files
     r'^registry\.json$',
     r'^.*\.example\.json$',
+    r'^CHANGELOG\.md$',  # Project changelog
+    r'^CONTRIBUTING\.md$',  # Contribution guidelines
+    r'^CODE_OF_CONDUCT\.md$',  # Code of conduct
+    r'^.*\.code-snippets$',  # VS Code snippets
 ]
 
 EXCLUDE_DIRS = [
     '.git',
     '.github',
     '.venv',  # Virtual environment
+    '.vscode',  # VS Code settings
+    '.pytest_cache',  # Pytest cache
     '__pycache__',
     'node_modules',
     'tools',  # Tools directory exempt
     'standards',  # Standards directory exempt
     'registry',  # Registry directory exempt
     'archive',  # Archive directory exempt
+    'docs',  # Documentation directory exempt
 ]
 
 

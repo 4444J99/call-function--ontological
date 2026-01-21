@@ -1,0 +1,45 @@
+<!--
+Layer: interface | Role: portal | Domain: entry
+Responsibility: Serves as the main entry point portal for user interaction
+Inputs: User navigation, URL parameters
+Outputs: Rendered HTML interface
+Invariants: Must be valid HTML5, accessible
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entry Portal</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #3498db;
+            --bg: #ecf0f1;
+        }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 2rem;
+            background: var(--bg);
+            color: var(--primary);
+        }
+        .portal {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 { color: var(--accent); }
+    </style>
+</head>
+<body>
+    <main class="portal">
+        <h1>Entry Portal</h1>
+        <p>Welcome to the FUNCTIONcalled() interface layer example.</p>
+        <p>This file demonstrates the <code>{Layer}.{Role}.{Domain}.{ext}</code> naming convention.</p>
+    </main>
+</body>
+</html>

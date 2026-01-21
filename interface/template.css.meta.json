@@ -1,0 +1,10 @@
+{
+  "profile": "light",
+  "name": "template.css",
+  "identifier": "urn:uuid:fc000002-0002-4002-8002-000000000002",
+  "version": "1.0.0",
+  "schema:type": "CreativeWork",
+  "encodingFormat": "text/css",
+  "license": "MIT",
+  "description": "Interface layer template for CSS - styling, aesthetics, presentation"
+}

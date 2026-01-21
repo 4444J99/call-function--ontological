@@ -1,0 +1,15 @@
+PLACEHOLDER: logic.audio.notification.mp3
+
+This is a placeholder for an audio notification file.
+
+In a real project, this would be an MP3 or WAV file containing:
+- A short notification sound
+- Used by the logic layer for alerting users
+
+The accompanying .meta.json file demonstrates how FUNCTIONcalled()
+handles non-code assets with the AudioObject schema type.
+
+To use actual audio:
+1. Replace this file with your .mp3 or .wav
+2. Rename to: logic.audio.notification.mp3
+3. Update the .meta.json encodingFormat accordingly
