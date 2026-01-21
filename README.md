@@ -1,129 +1,187 @@
-# FUNCTIONcalled() Repo Scaffold
+# FUNCTIONcalled()
 
-This repository implements the FUNCTIONcalled() naming and metadata conventions.
+**A self-documenting naming convention for code, media, and knowledge systems.**
 
-## Structure
+---
 
-- **standards/**: specifications and schemas
-- **tools/**: validators and registry builder scripts
-- **examples/**: canonical metadata examples
-- **registry/**: generated catalogues
-- **core**, **interface**, **logic**, **application**: base layers for your project
-- **archive/**: place for frozen history or old versions
+## The Problem
 
-## Naming Convention
+Codebases become unnavigable. Files named `utils.js`, `helpers.py`, and `common.ts` proliferate. Developers spend more time *finding* code than *writing* it.
 
-Files follow the pattern: `{Layer}.{Role}.{Domain}.{Extension}`
-
-**Repository name convention:**
-- Use `call-{name}--{descriptor}` for repos following FUNCTIONcalled conventions
-- Single hyphen (`-`) separates words within a segment
-- Double hyphen (`--`) separates the function name from its descriptor
-
-**Layers** (canonical | alias):
-| Layer | Alias | Purpose |
-|-------|-------|---------|
-| `core` | `bones` | Foundation, kernel, structure |
-| `interface` | `skins` | Portals, surfaces, UI |
-| `logic` | `breath` | Scripts, intelligence, agents |
-| `application` | `body` | Embodiment, apps, bridges |
-
-**Version format:** Semantic versioning (e.g., `1.0.0`, `2.1.3-beta.1+build.456`)
-
-## Installation
-
-```bash
-# Install all dependencies (jsonschema + semgrep)
-make install-deps
-
-# Or install individually
-pip install jsonschema semgrep
+```
+src/
+├── utils/
+│   ├── helpers.js      # What does this help?
+│   ├── utils.js        # Utility for what?
+│   └── common.js       # Common to whom?
+└── components/
+    └── Modal.tsx       # Which modal? For what?
 ```
 
-## Usage
+Search results show filenames stripped of context. Editor tabs become meaningless. New team members take weeks to navigate. The implicit structure of your system remains invisible.
+
+---
+
+## The Approach
+
+**FUNCTIONcalled()** makes names *autological* — self-describing without external lookup.
+
+Every file follows one pattern:
+
+```
+{Layer}.{Role}.{Domain}.{Extension}
+```
+
+**Four layers** map to how systems naturally organize:
+
+| Layer | Purpose | Languages |
+|-------|---------|-----------|
+| `core` | Foundation, kernel, primitives | C, C++, Rust, Go |
+| `interface` | Portals, surfaces, UI | HTML, CSS, JS, PHP |
+| `logic` | Scripts, intelligence, agents | Python, Lua, Ruby |
+| `application` | Apps, services, bridges | Swift, Obj-C, Java |
+
+**Examples:**
+```
+core.router.network.c           # Network routing primitives
+interface.modal.confirmation.tsx # Confirmation dialog component
+logic.validator.email.py        # Email validation logic
+application.app.mobile.swift    # Mobile app entry point
+```
+
+Now search for "validator" and find `logic.validator.email.py`. The name tells you: it's logic layer, it validates, it's about email, it's Python.
+
+---
+
+## The Outcome
+
+- **Instant navigation** — Find files by what they *do*, not where they *are*
+- **Self-documenting structure** — New developers understand the system from filenames alone
+- **Explicit architecture** — The four-layer model surfaces implicit design decisions
+- **Universal application** — Works for code, images, audio, documents, any file type
+
+```
+project/
+├── core/
+│   └── core.engine.compute.rs
+├── interface/
+│   ├── interface.button.primary.tsx
+│   └── interface.layout.dashboard.css
+├── logic/
+│   ├── logic.agent.analysis.py
+│   └── logic.validator.email.ts
+└── application/
+    └── application.app.mobile.swift
+```
+
+---
+
+## Quick Start
 
 ```bash
-# Validate metadata sidecar files (.meta.json)
-make validate
+# Clone and setup
+git clone https://github.com/YOUR_USERNAME/call-function--ontological.git
+cd call-function--ontological
 
-# Validate file naming conventions
-make validate-naming
+# Install dependencies
+make install-deps
 
-# Run semgrep rules for header comments
-make semgrep
-
-# Run ALL validators
+# Validate your files
 make validate-all
 
 # Build the registry
 make registry
-
-# Install pre-commit hook (runs all validators)
-make hook-install
 ```
 
-See `standards/FUNCTIONcalled_Spec_v1.0.md` for the full specification and `standards/FUNCTIONcalled_Metadata_Sidecar.v1.1.schema.json` for the metadata schema.
+Create a file following the convention:
+```bash
+# logic/logic.util.string.py
+```
 
-## Schema.org Integration
+Add a metadata sidecar (optional):
+```json
+{
+  "profile": "light",
+  "name": "logic.util.string.py",
+  "identifier": "urn:uuid:YOUR-UUID",
+  "version": "1.0.0"
+}
+```
 
-The metadata schema supports these Schema.org types for `schema:type`:
-- `SoftwareSourceCode`, `SoftwareApplication`
-- `CreativeWork`, `Dataset`, `Article`, `WebPage`
-- `ImageObject`, `AudioObject`, `VideoObject`
-- `TextDigitalDocument`
+See the [Quick Start Guide](docs/quickstart.md) for a complete walkthrough.
 
-The `conformsTo` field accepts URI references to standards.
+---
 
-## Rosetta Stone Codex
+## Repository Structure
 
-Below is a mapping of file types to their roles and use-cases across the four layers:
+```
+├── core/           # Foundation layer templates
+├── interface/      # Interface layer templates
+├── logic/          # Logic layer templates
+├── application/    # Application layer templates
+├── examples/       # Canonical naming examples
+├── standards/      # Specification and schemas
+├── tools/          # Validators and registry builder
+├── docs/           # Guides and documentation
+└── registry/       # Generated resource catalogue
+```
 
-| File Type | Technical Role | Symbolic Role | Use Case |
-|-----------|---------------|--------------|---------|
-| .c   | OS kernels, low-level logic | Stone tablets | Core patchbay engine |
-| .cpp | Game engines, OOP systems | Forge/Craft | Narrative game engine |
-| .css | Styling (web) | Vestments | Shrine visuals |
-| .go  | Concurrent backend services | Messengers | APIs & sync |
-| .html | Web structure | Temple/Portal | Ritual interfaces |
-| .java | Android apps | Duality | Shrine apps (Android) |
-| .js   | Frontend logic | Trickster/Magician | Transmutater / Shrine interactivity |
-| .lua  | Lightweight scripts | Spirit/Breath | Embedded scripts |
-| .m    | Legacy Apple hooks | Ancestor/Roots | Low-level Apple rituals |
-| .php  | Server/CMS | Scribes/Archivists | Forum backend |
-| .py   | AI/ML & scripts | Oracle/Seer | AI & storytelling |
-| .rb   | Dynamic scripting | Alchemist | Generative hubs |
-| .rs   | Secure concurrency | Guardian | Integrity engine |
-| .swift| iOS apps | Phoenix | Shrine AR apps |
+---
 
-### Meta Pattern
+## Tooling
 
-- Systems languages (C, C++, Rust, Go) = Bones & blood vessels of the OS
-- Web stack (HTML, CSS, JS, PHP) = Skins & portals
-- Scripting & AI (Python, Lua, Ruby) = Breath & spirit
-- Mobile (Swift, Obj-C, Java) = Embodiment in the physical hand-held world
+```bash
+make validate        # Validate metadata sidecars
+make validate-naming # Validate file naming
+make validate-all    # Run all validators
+make registry        # Build resource registry
+make hook-install    # Install pre-commit validation
+```
 
-## Projects Using FUNCTIONcalled()
-
-*Is your project using FUNCTIONcalled()? [Submit a PR](https://github.com/YOUR_USERNAME/call-function--ontological/pulls) to add it here!*
-
-<!-- Example format:
-- [Project Name](https://github.com/user/repo) - Brief description
--->
+---
 
 ## Documentation
 
-- [Quick Start Guide](docs/quickstart.md) - Get started in 5 minutes
-- [Full Specification](standards/FUNCTIONcalled_Spec_v1.0.md) - Complete naming spec
-- [Layer Architecture](docs/layers.md) - Visual guide to the four layers
-- [Migration Guide](docs/migration.md) - Adopt FUNCTIONcalled() in existing projects
-- [Comparison](docs/comparison.md) - How it compares to BEM, Atomic Design, etc.
-- [Case Study](docs/case-study.md) - Real-world adoption example
+| Guide | Description |
+|-------|-------------|
+| [Quick Start](docs/quickstart.md) | Get started in 5 minutes |
+| [Full Specification](standards/FUNCTIONcalled_Spec_v1.0.md) | Complete naming rules and rationale |
+| [Layer Architecture](docs/layers.md) | Visual guide with dependency rules |
+| [Migration Guide](docs/migration.md) | Adopt in existing projects |
+| [Comparison](docs/comparison.md) | vs. BEM, Atomic Design, Clean Architecture |
+| [Case Study](docs/case-study.md) | Real-world adoption example |
+
+---
+
+## The Symbolic Layer (Optional)
+
+Each layer has an archetypal alias for metaphorical contexts:
+
+| Canonical | Alias | Metaphor |
+|-----------|-------|----------|
+| `core` | `bones` | Foundation, structure, integrity |
+| `interface` | `skins` | Portals, surfaces, aesthetics |
+| `logic` | `breath` | Intelligence, spirit, generative power |
+| `application` | `body` | Embodiment, lived experience |
+
+Use canonical names for production. Use aliases when the symbolic resonates.
+
+---
+
+## Projects Using FUNCTIONcalled()
+
+*Using FUNCTIONcalled()? [Submit a PR](https://github.com/YOUR_USERNAME/call-function--ontological/pulls) to add your project.*
+
+<!--
+- [Project Name](https://github.com/user/repo) - Description
+-->
+
+---
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## License
 
 MIT
-
