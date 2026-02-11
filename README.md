@@ -5,6 +5,14 @@
 
 # FUNCTIONcalled()
 
+[![CI](https://github.com/organvm-i-theoria/call-function--ontological/actions/workflows/ci.yml/badge.svg)](https://github.com/organvm-i-theoria/call-function--ontological/actions/workflows/ci.yml)
+[![Coverage](https://img.shields.io/badge/coverage-pending-lightgrey)](https://github.com/organvm-i-theoria/call-function--ontological)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/organvm-i-theoria/call-function--ontological/blob/main/LICENSE)
+[![Organ I](https://img.shields.io/badge/Organ-I%20Theoria-8B5CF6)](https://github.com/organvm-i-theoria)
+[![Status](https://img.shields.io/badge/status-active-brightgreen)](https://github.com/organvm-i-theoria/call-function--ontological)
+[![Python](https://img.shields.io/badge/lang-Python-informational)](https://github.com/organvm-i-theoria/call-function--ontological)
+
+
 **A universal, self-documenting naming convention for files across codebases, media archives, and knowledge systems.**
 
 Every file follows a single canonical pattern: `{Layer}.{Role}.{Domain}.{Extension}`. Four layers — core, interface, logic, application — map to symbolic categories that make filenames *autological*: a file's name tells you what it is, where it lives in the architecture, and why it exists.
