@@ -8,23 +8,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- Validator test suites for `validate_meta.py` and `validate_naming.py`
-- Template metadata sidecars for all layer templates
-- Source files for example metadata sidecars
-- Clarified canonical vs alias layer naming in spec
 
-### Changed
-- Renamed example files to follow strict `{Layer}.{Role}.{Domain}.{ext}` convention
-- Updated spec §2, §3, §4 to prioritize canonical layer names over aliases
+- Platinum Sprint: CI/CD workflow, standardized badge row, ADR documentation
+- Initial CHANGELOG following Keep a Changelog format
 
-## [1.0.0] - 2025-08-18
+## [0.1.0] - 2026-02-11
 
 ### Added
-- Initial FUNCTIONcalled() specification v1.0
-- Four-layer system: core, interface, logic, application
-- Metadata sidecar schema (light and full profiles)
-- Validation tools: `validate_meta.py`, `validate_naming.py`
-- Registry builder: `registry-builder.py`
-- Semgrep rules for header comment validation
-- Template files for each layer
-- Makefile with validation targets
+
+- Initial public release as part of the organvm eight-organ system
+- Core project structure and documentation
+- README with portfolio-quality documentation
+
+[Unreleased]: https://github.com/organvm-i-theoria/call-function--ontological/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/organvm-i-theoria/call-function--ontological/releases/tag/v0.1.0
