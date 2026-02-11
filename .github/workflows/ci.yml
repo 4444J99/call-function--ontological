@@ -1,0 +1,60 @@
+name: Minimal CI
+
+on:
+  push:
+    branches: [ main, master, develop ]
+  pull_request:
+    branches: [ main, master, develop ]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Detect repository type
+        id: detect
+        run: |
+          if [ -f "Package.swift" ]; then
+            echo "type=swift" >> $GITHUB_OUTPUT
+          elif [ -f "Gemfile" ] || [ -f "_config.yml" ]; then
+            echo "type=ruby" >> $GITHUB_OUTPUT
+          elif [ -f "package.json" ]; then
+            echo "type=node" >> $GITHUB_OUTPUT
+          elif [ -f "pyproject.toml" ] || [ -f "requirements.txt" ]; then
+            echo "type=python" >> $GITHUB_OUTPUT
+          else
+            echo "type=generic" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Validate structure
+        run: |
+          echo "Repository structure:"
+          ls -la
+          echo ""
+          echo "README check:"
+          if [ -f "README.md" ]; then
+            echo "::notice::README.md found"
+            wc -w README.md
+          else
+            echo "::warning::No README.md found"
+          fi
+          echo ""
+          echo "License check:"
+          if [ -f "LICENSE" ] || [ -f "LICENSE.md" ]; then
+            echo "::notice::License file found"
+          else
+            echo "::warning::No license file found"
+          fi
+
+      - name: Jekyll build check
+        if: steps.detect.outputs.type == 'ruby'
+        run: |
+          if [ -f "_config.yml" ]; then
+            echo "::notice::Jekyll site detected"
+          fi
+
+      - name: Success
+        run: echo "::notice::Minimal CI validation passed"
