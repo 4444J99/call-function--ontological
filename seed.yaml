@@ -1,0 +1,37 @@
+# seed.yaml — Automation Contract for organvm-i-theoria/call-function--ontological
+# Schema: seed/v1.0
+# Generated: 2026-02-12 (AUTONOMY Sprint)
+# Category: flagship_with_deps
+
+schema_version: "1.0"
+organ: I
+organ_name: Theory
+repo: call-function--ontological
+org: organvm-i-theoria
+
+metadata:
+  implementation_status: PRODUCTION
+  tier: standard
+  promotion_status: PUBLIC_PROCESS
+  last_validated: "2026-02-11"
+  generated: "2026-02-12"
+  sprint: "AUTONOMY"
+
+agents:
+  - name: ci
+    trigger: on_push
+    workflow: .github/workflows/ci-python.yml
+    description: "Continuous integration pipeline"
+
+consumes:
+  - type: dependency
+    source: organvm-i-theoria/organon-noumenon--ontogenetic-morphe
+    description: Depends on organvm-i-theoria/organon-noumenon--ontogenetic-morphe
+
+subscriptions:
+  - event: governance.updated
+    source: ORGAN-IV
+    action: Check compliance with updated governance rules
+  - event: health-audit.completed
+    source: ORGAN-IV
+    action: Review audit findings for this repo
