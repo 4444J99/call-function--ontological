@@ -1,7 +1,6 @@
 # seed.yaml — Automation Contract for organvm-i-theoria/call-function--ontological
 # Schema: seed/v1.0
-# Generated: 2026-02-12 (AUTONOMY Sprint)
-# Category: flagship_with_deps
+# Generated: 2026-02-17 (SENSORIA Sprint)
 
 schema_version: "1.0"
 organ: I
@@ -10,12 +9,13 @@ repo: call-function--ontological
 org: organvm-i-theoria
 
 metadata:
-  implementation_status: PRODUCTION
+  implementation_status: ACTIVE
   tier: standard
   promotion_status: PUBLIC_PROCESS
   last_validated: "2026-02-11"
-  generated: "2026-02-12"
-  sprint: "AUTONOMY"
+  generated: "2026-02-17"
+  sprint: "SENSORIA"
+  language: python
 
 agents:
   - name: ci
@@ -23,10 +23,11 @@ agents:
     workflow: .github/workflows/ci-python.yml
     description: "Continuous integration pipeline"
 
-consumes:
-  - type: dependency
-    source: organvm-i-theoria/organon-noumenon--ontogenetic-morphe
-    description: Depends on organvm-i-theoria/organon-noumenon--ontogenetic-morphe
+produces:
+  - type: theory
+    description: "Epistemological frameworks, recursive engines, ontological systems"
+
+consumes: []
 
 subscriptions:
   - event: governance.updated
